@@ -1,0 +1,238 @@
+/* Thiết lập font chung cho toàn bộ trang */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Phần header */
+header {
+    background-color: #f3f3f3;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Căn phần từ hai bên */
+}
+
+/* Phần ảnh */
+.avatar img {
+    opacity: 0; /* Ẩn ảnh ban đầu */
+    animation: slideIn 1s ease forwards; /* Áp dụng hiệu ứng di chuyển */
+    width: 300px; /* Thiết lập chiều rộng của ảnh */
+    height: auto; /* Cho phép chiều cao tự động tính toán để giữ tỉ lệ khung hình */
+}
+
+/* Hiệu ứng di chuyển */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%); /* Di chuyển ảnh ra khỏi màn hình từ bên trái */
+        opacity: 0; /* Ẩn ảnh */
+    }
+    to {
+        transform: translateX(0); /* Hiển thị ảnh ở vị trí ban đầu */
+        opacity: 1; /* Hiển thị ảnh */
+    }
+}
+
+/* Phần thông tin */
+/* Phần thông tin */
+.info {
+    opacity: 0; /* Ẩn thông tin ban đầu */
+    transform: translateX(50px); /* Di chuyển thông tin sang phải 50px */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Áp dụng hiệu ứng chuyển động */
+    margin-left: auto; /* căng phần tử sang giữa */
+    margin-right: auto; /* căng phần tử sang giữa */
+    max-width: 600px; /* Giới hạn chiều rộng tối đa của phần thông tin */
+}
+
+
+/* Phần thông tin - Tiêu đề */
+.info h1 {
+    margin: 0;
+}
+
+/* Phần thông tin - Địa chỉ email, Số điện thoại, Địa chỉ */
+.info p {
+    margin: 5px 0;
+}
+
+
+/* Phần giới thiệu */
+#introduction {
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-top: 20px; /* Tạo khoảng cách giữa header và phần giới thiệu */
+}
+
+#introduction h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#introduction p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Phần dự án */
+#projects {
+    padding: 20px;
+    margin-top: 20px; /* Tạo khoảng cách giữa phần giới thiệu và phần dự án */
+}
+
+#projects h2 {
+    margin-bottom: 20px;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+/* Phần footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px; /* Tạo khoảng cách giữa phần dự án và footer */
+}
+/* Phần kỹ năng */
+#skills {
+    padding: 20px;
+    background-color: #f9f9f9;
+    margin-top: 20px; /* Tạo khoảng cách giữa phần giới thiệu và phần kỹ năng */
+}
+
+#skills h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.skill {
+    flex: 1;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.skill-name {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.skill-bar {
+    height: 10px;
+    border-radius: 5px;
+}
+
+.html { background-color: #e44d26; width: 80%; }
+.css { background-color: #264de4; width: 70%; }
+.react { background-color: #61dbfb; width: 60%; }
+.javascript { background-color: #f0db4f; width: 75%; }
+.cpp { background-color: #00599c; width: 65%; }
+.sql { background-color: #f29111; width: 55%; }
+.photoshop { background-color: #7CDDC9; width: 50%; }
+/* Phần dự án */
+#projects {
+    padding: 20px;
+    margin-top: 20px; 
+    background-color: #f9f9f9;
+}
+
+#projects h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center; /* Canh giữa tiêu đề */
+}
+
+.project {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Thêm hiệu ứng chuyển đổi cho transform và box-shadow */
+}
+
+.project h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333; /* Màu chữ cho tiêu đề */
+}
+
+.project p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #666; /* Màu chữ cho nội dung */
+}
+
+/* Nút GitHub Link */
+.project a {
+    display: inline-block;
+    background-color: #474849;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.project a:hover {
+    background-color: #0056b3; /* Màu nền hover */
+    color: #fff; /* Màu chữ hover */
+}
+/* Hiệu ứng hover */
+.project:hover {
+    transform: translateY(-5px); /* Di chuyển lên trên khi hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng đổ mạnh hơn */
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info, .social-icons {
+    text-align: center;
+}
+
+.contact-info h3, .social-icons h3 {
+    margin-bottom: 10px;
+}
+
+.contact-info p, .social-icons a {
+    margin: 5px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #0f0f0f;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+h2 {
+    color: #333; /* Màu chữ */
+    font-size: 28px; /* Kích thước chữ */
+    font-weight: bold; /* Độ đậm của chữ */
+    text-transform: uppercase; /* Chuyển đổi sang chữ in hoa */
+    margin-bottom: 20px; /* Khoảng cách dưới */
+    border-bottom: 3px solid #333; /* Đường viền dưới */
+    padding-bottom: 5px; /* Khoảng cách phía dưới đường viền */
+}
